@@ -1,0 +1,171 @@
+.table{
+    display: flex;
+    flex-direction: column;
+}
+
+.tr{
+    display: flex;
+    flex-direction: row;
+}
+
+.cellWrapper{
+    position: relative;
+}
+
+.tc{
+    position: relative;
+    border: 1px solid aliceblue;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.tc::-webkit-scrollbar{
+    display: none;
+}
+
+.tc .title{
+    font-size: 1.2em;
+    padding: 0.4em;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tc .content{
+    word-wrap: break-word;
+    color: aliceblue;
+}
+
+.tc .content div{
+    padding: 1em;
+}
+
+.tc .header{
+    display: block;
+    font-size: 1.1em;
+}
+
+
+.tc .editIcon{
+    position: absolute;
+    right: 0.4em;
+    top: 0.6em;
+}
+
+.tc .editIcon:hover, .refreshBtn:hover{
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.contextMenuInner{
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+
+    z-index: 3;
+}
+
+.contextMenuInner div{
+    padding: 0.4em 1em;
+
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    border: 1px solid white;
+}
+
+.contextMenuInner div:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.editPanel{
+    position: fixed;
+    left: calc(50vw - 30em);
+    top: calc(50vh - 20em);
+
+    width: 60em;
+    height: 40em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    z-index: 3;
+}
+
+.editPanel div{
+    display: flex;
+    justify-content: center;
+
+    margin: 1em 2em;
+}
+
+.editPanel .title{
+    font-size: 1.6em;
+}
+
+.editPanel .header{
+    font-size: 1.1em;
+}
+
+.editPanel textarea{
+    width: 42em;
+    height: 8em;
+
+    padding: 0.4em;
+
+    min-height: 4em;
+    resize: none;
+
+    font-size: 1.2em;
+}
+
+.editPanel .btnGroup button{
+    margin: 1em 2em;
+
+    font-size: 1.4em;
+    padding: 1em 2em;
+    border: 1px solid aliceblue;
+
+    color: aliceblue;
+    background-color: transparent;
+}
+
+.editPanel .btnGroup button:hover{
+    transform: translateY(-2px);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.refreshBtn{
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+
+    color: aliceblue;
+}
+
+.dragBtn{
+    position: absolute;
+    right: 4px;
+    bottom: 1px;
+
+    z-index: 3;
+    transition-duration: unset;
+}
+
+.dragBtn:hover{
+    cursor: none;
+    opacity: 0.8;
+}
