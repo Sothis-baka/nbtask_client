@@ -10,6 +10,7 @@ class DragBtn extends React.Component{
                 this.dragStart = [x, y]
             },
             onDragEnd: (_, x, y) => {
+                if(!this.dragStart) return;
                 this.props.handelResize(x - this.dragStart[0], y-this.dragStart[1]);
             }
         };

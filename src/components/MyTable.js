@@ -73,6 +73,11 @@ class MyTable extends React.Component{
         const style = { ...this.state.style };
         style.height[rowI] += y;
         style.width[colI] += x;
+
+        // minimum
+        if(style.height[rowI] <= 50) style.height[rowI] = 50;
+        if(style.width[colI] <= 50) style.width[colI] = 50;
+
         this.setState({ style });
     }
 

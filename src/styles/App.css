@@ -6,7 +6,8 @@
 }
 
 #root{
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     background: linear-gradient(#141e30, #243b55);
 }
 
@@ -20,3 +21,35 @@ svg{
     height: 1.2em;
 }
 
+/* Some styles for the nav bars on top */
+nav{
+    display: flex;
+    color: white;
+    background-color: #141e30;
+}
+nav div{
+    flex: 1;
+    border: 1px solid white;
+    padding: 0.4em 0.8em;
+    text-align: center;
+}
+
+nav div.focus{
+    color: #243b55;
+    background-color: aliceblue;
+}
+
+nav div:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.samplePage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 80vh;
+
+    color: white;
+}
